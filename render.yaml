@@ -4,7 +4,6 @@ services:
     env: docker
     plan: free
     dockerfilePath: Dockerfile
-    startCommand: python backend/main.py
     envVars:
       - key: REPLICATE_API_TOKEN
         sync: false
