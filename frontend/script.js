@@ -19,7 +19,7 @@ document.getElementById("uploadForm").addEventListener("submit", async (e) => {
   document.getElementById("output").textContent = "Processing... Please wait...";
 
   try {
-    const response = await fetch("https://your-backend-url.onrender.com/process", {
+    const response = await fetch("https://concisio-v2.onrender.com/process", {
       method: "POST",
       body: formData
     });
