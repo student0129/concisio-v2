@@ -67,7 +67,7 @@ async def process_audio(
         # WhisperX transcription
         with open(wav_path, "rb") as audio_file:
             output = replicate.run(
-                "m-bain/whisperx:latest",
+                "student0129/whisperx-replicate-from-github:latest",
                 input={
                     "audio": audio_file,
                     "task": "transcribe",
