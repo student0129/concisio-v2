@@ -3,7 +3,8 @@ services:
     name: whisperx-backend
     env: docker
     plan: free
-    dockerfilePath: Dockerfile  # Optional (default is root)
+    dockerfilePath: Dockerfile
+    startCommand: python backend/main.py
     envVars:
       - key: REPLICATE_API_TOKEN
         sync: false
