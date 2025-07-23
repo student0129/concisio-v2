@@ -3,12 +3,7 @@ services:
     name: whisperx-backend
     env: docker
     plan: free
-    buildCommand: ""  # not needed in Docker mode
-    startCommand: ""  # use CMD from Dockerfile
-    dockerfilePath: backend/Dockerfile
-    buildFilter:
-      paths:
-        - backend/**
+    dockerfilePath: Dockerfile  # Optional (default is root)
     envVars:
       - key: REPLICATE_API_TOKEN
         sync: false
