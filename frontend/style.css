@@ -1,0 +1,25 @@
+/* File: frontend/style.css */
+
+body {
+  font-family: sans-serif;
+  margin: 2em;
+}
+
+label, input, select, textarea {
+  display: block;
+  margin-top: 1em;
+  width: 100%;
+}
+
+button {
+  margin-top: 1.5em;
+  padding: 0.5em 1em;
+}
+
+.output {
+  margin-top: 2em;
+  white-space: pre-wrap;
+  background: #f4f4f4;
+  padding: 1em;
+  border-radius: 5px;
+}
