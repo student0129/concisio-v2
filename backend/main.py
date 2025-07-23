@@ -8,8 +8,13 @@ import openai
 import tempfile
 import subprocess
 import os
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi import Request
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 # Allow frontend to access backend
 app.add_middleware(
@@ -43,6 +48,10 @@ def convert_audio_to_wav(uploaded_file):
 
     return output_temp.name
 
+@app.get("/", response_class=HTMLResponse)
+async def serve_index():
+    with open("frontend/index.html", "r") as f:
+        return f.read()
 
 @app.post("/process")
 async def process_audio(
